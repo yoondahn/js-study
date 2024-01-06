@@ -6,17 +6,24 @@
         <link type="text/css" rel="stylesheet" href="study_login.css" />
     </head>
 
-    <body>       
-        <h2 id="clock">00:00:00</h2>
+    <body>
+        <div id="ddayBackground">
+            <h3>Time Until 2025</h3>
+            <h4 id="d-day">000d 00h 00m 00s</h4>
+        </div>
+
+        <h1 id="clock">00:00:00</h1>
         <form class="hidden" id="login-form">
             <input required maxlength="15" type="text" placeholder="What is your name?">
             <input type="submit" value="Log In">
         </form>
         <h1 class="hidden" id="greeting"></h1>
 
-        <form id="todo-form">
+        <!-- <form id="todo-form">
              <input type="text" placeholder="Write a To Do and Press Enter" required>
-        </form>
+        </form> -->
+
+        <button>Change Background Color</button>
 
         <ul id="todo-list"> </ul>
 
@@ -25,6 +32,8 @@
             <span></span>
         </div>
         
+        <script src="challenge4.js"></script>
+        <script src="challenge5.js"></script>
         <script src="study_login.js"></script>
         <script src="study_clock.js"></script>
         <script src="study_background.js"></script>

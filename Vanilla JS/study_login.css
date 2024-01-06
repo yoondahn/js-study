@@ -1,3 +1,11 @@
 .hidden {
     display: none;
 }
+
+#ddayBackground {
+    background-color: aliceblue;
+    float: left;
+    border-radius: 0.5em;
+    padding: 8px 24px 8px 24px;
+    margin-right: 50px;
+}
