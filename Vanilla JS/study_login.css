@@ -9,3 +9,11 @@
     padding: 8px 24px 8px 24px;
     margin-right: 50px;
 }
+
+#btnBackgoundColor {
+    float: right;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 0.5em;
+    border-color: white;
+}
