@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <div id="root"></div>
+    </body>
+    <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        const root = document.getElementById("root");
+        const title = (     // JSX -> Babel 사용
+            <h3 id="title" onMouseEnter={ () => console.log("mouse enter") }
+            >
+                I'm a span
+            </h3>
+        );
+
+        // const h3 = React.createElement("h3", {
+        //     onMouseEnter: () => console.log("mouse enter"),     // event listener
+        // }, 
+        // // {id: "span1", style:{color: "red"}}, 
+        // "I'm a span");
+
+        const button = (
+            <button style={ {backgroundColor: "yellow",} }
+            onClick={ () => console.log("i'm clicked") }
+            >
+                Click me
+            </button>
+        );
+
+        // const btn = React.createElement("button", {
+        //     onClick: () => console.log("i'm clicked"),
+        //     style: {
+        //         backgroundColor: "yellow",
+        //     }
+        // }, "Click me");
+
+        // const br = React.createElement("br");
+        const container = React.createElement("div", null, [title, button]);  // array 사용
+        ReactDOM.render(container, root);
+    </script>
+</html>
