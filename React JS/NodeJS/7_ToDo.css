@@ -1,0 +1,47 @@
+.todo-app {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .todo-app h2 {
+    color: #333;
+    margin: 8px;
+  }
+  
+  .todo-app form {
+    margin-bottom: 10px;
+  }
+  
+  .todo-app input {
+    padding: 8px;
+    margin: 4px;
+  }
+  
+  .todo-app button {
+    padding: 8px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 4px;
+  }
+  
+  .todo-app button:hover {
+    background-color: #45a049;
+  }
+  
+  .todo-app ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .todo-app li {
+    margin-bottom: 6px;
+    padding: 6px;
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
