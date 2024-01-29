@@ -8,7 +8,7 @@ function Hello() {
   //   };
   // }, [])
 
-  useEffect(() => {
+  useEffect(() => {   // cleanup function
     console.log("hi");
     return () => console.log("bye");
   }, []);
