@@ -1,39 +1,28 @@
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
  
-function Movie({ key, converImg, title, summary, genres }) {
+function Movie({ coverImg, title, summary, genres }) {
     return(
-        <div className="movie-app">
-          {loading ? (
-            <h3>Loading...</h3>
-          ) : (
-            <div>
-                <div key={key} className="movie-card">
-                  <img
-                    src={converImg}
-                    alt={title}
-                    className="movie-image"
-                  />
-                  <div className="movie-details">
-                    <h2 className="movie-title">{title}</h2>
-                    <p className="movie-summary">{summary}</p>
-                    <ul className="movie-genres">
-                      {genres.map((g) => (
-                        <li key={g}>{g}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-            </div>
-          )}
+      <div>
+        <img src={coverImg} alt={title}/>
+        <div>
+          <h2><Link to="/movie">{title}</Link></h2>
+          <p>{summary}</p>
+          <ul>
+            {genres.map((g) => (
+              <li key={g}>{g}</li>
+            ))}
+          </ul>
         </div>
+      </div>
     );
 }
 
 Movie.prototype = {
-    key: PropTypes.string.isRequired,
+    coverImg: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     summary: PropTypes.string.isRequired,
-    genres: PropTypes.string.isRequired,
+    genres: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default Movie;
