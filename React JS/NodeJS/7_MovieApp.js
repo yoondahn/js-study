@@ -7,12 +7,12 @@ function MovieApp() {
     return (
       <Router>
         <Switch>
-            <Route path="/movie">
-                <Detail />
+            <Route path="/movie/:id">
+              <Detail />
             </Route>
             <Route path="/">
-                <ToDo />
-                <Home />
+              <ToDo />
+              <Home />
             </Route>
         </Switch>
       </Router>  
